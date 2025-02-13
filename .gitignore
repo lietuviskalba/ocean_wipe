@@ -1,0 +1,19 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot generated folders and files
+.import/
+.export/
+export.cfg
+export_presets.cfg
+
+# Backup files (Godot creates backup copies with ~ appended)
+*~
+
+# Temporary files (OS or editor specific)
+.DS_Store
+Thumbs.db
+
+# If using C# or Mono (optional)
+.mono/
