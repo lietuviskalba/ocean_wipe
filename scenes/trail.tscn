@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://obdd5udkxvnh"]
+
+[sub_resource type="GDScript" id="GDScript_8xdnb"]
+
+[node name="Trail" type="Line2D"]
+script = SubResource("GDScript_8xdnb")

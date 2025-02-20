@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgpkm5wj2pglk"]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_mtfwn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_clujr"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(100, 100)
+script = ExtResource("1_mtfwn")
+speed = null
+play_area_rect = null
+
+[node name="Visual" type="ColorRect" parent="Player"]
+z_index = -1
+offset_left = -20.0
+offset_top = -19.0
+offset_right = 20.0
+offset_bottom = 21.0
+color = Color(0.343029, 0.341414, 0.858565, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_clujr")
+
+[node name="Trail" type="Line2D" parent="."]
+z_index = 999
+points = PackedVector2Array(0, 0, 500, 0)
+default_color = Color(0.92424, 0.303337, 0.596891, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+rotation = 1.95651
+zoom = Vector2(0.2, 0.2)

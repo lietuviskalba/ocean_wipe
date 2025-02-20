@@ -1,18 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1lp7f7c2fx3j"]
+[gd_scene load_steps=5 format=3 uid="uid://dy1hmtei1yapo"]
 
-[ext_resource type="Script" path="res://scripts/Player.gd" id="1_ph81s"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_y6wsh"]
+[ext_resource type="PackedScene" uid="uid://obdd5udkxvnh" path="res://scenes/trail.tscn" id="2_s0u7c"]
+[ext_resource type="Script" path="res://scripts/trail.gd" id="3_knqmb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qxb7"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_700oi"]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_ph81s")
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_y6wsh")
+
+[node name="Trail" parent="." instance=ExtResource("2_s0u7c")]
+top_level = true
+points = PackedVector2Array(171, 68, 304, -24)
+width = 50.0
+default_color = Color(0.952272, 0.207989, 0.583825, 1)
+script = ExtResource("3_knqmb")
+min_distance = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_3qxb7")
+shape = SubResource("RectangleShape2D_700oi")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -20.0
 offset_top = -20.0
 offset_right = 20.0
 offset_bottom = 20.0
-color = Color(9.62615e-08, 0.660437, 0.661777, 0.627451)
+color = Color(0.169876, 0.588624, 0.809264, 1)
