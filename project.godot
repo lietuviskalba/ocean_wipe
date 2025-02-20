@@ -13,3 +13,7 @@ config_version=5
 config/name="ocean_wipe"
 run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
+
+[global_group]
+
+level_border="lets other scripts quickly check if node.is_in_group(\"level_border\") to detect it’s a boundary."

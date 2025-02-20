@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b4n2rh21jbsg0"]
+
+[node name="LevelBorder" type="Node2D" groups=["level_border"]]
+
+[node name="BorderLine" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 0, 300, 400, 300, 400, 0)
+closed = true
+width = 5.0
+default_color = Color(0.702625, 0.309969, 0.0753196, 1)
