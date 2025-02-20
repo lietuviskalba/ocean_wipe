@@ -1,6 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://obdd5udkxvnh"]
 
-[sub_resource type="GDScript" id="GDScript_8xdnb"]
+[ext_resource type="Script" path="res://scripts/trail.gd" id="1_1kdlt"]
 
 [node name="Trail" type="Line2D"]
-script = SubResource("GDScript_8xdnb")
+top_level = true
+default_color = Color(0.124598, 0.670012, 0.674383, 1)
+script = ExtResource("1_1kdlt")
